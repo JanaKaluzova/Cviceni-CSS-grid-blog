@@ -26,6 +26,7 @@ body {
   font-family: "Alice", serif;
   font-size: 18px;
   line-height: 1.5;
+  background-color: #dde7eb;
 }
 
 h1,
@@ -40,6 +41,7 @@ h3 {
 blockquote {
   font-family: "Kaushan Script", cursive;
   color: var(--seda);
+  text-align: center;
 }
 
 /* --------------------------------------------------- */
@@ -48,6 +50,8 @@ blockquote {
   display: grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-column-gap: 40px;
+  background-color: var(--svetla);
+  padding-top: 30px;
 }
 
 .blog > * {
@@ -58,32 +62,38 @@ blockquote {
 .blog > figure {
   grid-column: 1 / -1;
   margin: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .tip-vlevo {
   grid-column: 1;
   aspect-ratio: 16/9;
-  background-color: var(--seda);
+  background-color: rgba(218, 216, 216, 0.87);
   padding: 0.5rem;
   margin-bottom: 0;
   color: var(--tmava);
   border-right: solid 3px var(--oranzova);
   font-size: 15px;
+  margin-left: 10px;
+  text-align: right;
 }
 
 .tip-vpravo {
   grid-column: 3;
   aspect-ratio: 16/6;
-  background-color: var(--seda);
+  background-color: rgba(218, 216, 216, 0.87);
   padding: 0.5rem;
   margin-bottom: 0;
   color: var(--tmava);
-  border-right: solid 3px var(--oranzova);
+  border-left: solid 3px var(--oranzova);
   font-size: 15px;
+  margin-right: 10px;
 }
 
-.blockquote {
+.blog > blockquote {
   grid-column: 1 / -1;
+  font-size: 2rem;
 }
 
 a {
@@ -92,6 +102,7 @@ a {
 
 img {
   width: 100%;
+  aspect-ratio: 16/7;
 }
 
 h1 {
@@ -104,6 +115,32 @@ h1 {
 
 figcaption {
   color: var(--seda);
-  font-size: 10px;
+  font-size: 18px;
   margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 4vw;
+}
+
+.tip-vlevo > img {
+  aspect-ratio: 3/3;
+  padding: 0.5rem;
+}
+
+footer,
+footer > p > a {
+  color: var(--seda);
+  font-size: 1rem;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "";
+  width: 110px;
+  display: block;
+  margin-left: 30rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-top: 3px solid var(--zelena);
 }
